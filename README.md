@@ -16,7 +16,6 @@ npm install
 ## Start the Backend server 
 
 ```
-npm run start
 
 npm run server
 ```
