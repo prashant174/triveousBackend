@@ -1,8 +1,9 @@
 const bcrypt=require("bcrypt")
 const jwt=require("jsonwebtoken")
 const { UserModel } = require("../model/Auth.model")
+require("dotenv").config()
 
-//User SignUp
+
 
 const signUp=async(req,res)=>{
     const {name,email,password,role}=req.body
