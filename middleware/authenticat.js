@@ -1,9 +1,7 @@
-// import { Request, Response, NextFunction } from 'express';
+
 const jwt=require("jsonwebtoken")
 require("dotenv").config()
-// import jwt from 'jsonwebtoken';
-// import dotenv from 'dotenv'
-// dotenv.config()
+
 
  const authenticate = async ( req ,res,next ) =>{
     try {
@@ -12,7 +10,7 @@ require("dotenv").config()
       if(!token){
         return res.status(401).send({ msg : "login first"})
       }
-    //   const secretKey = process.env.secret as string;
+   
       const decoded = jwt.verify(token , process.env.JWT_SECRET)
 
       if(!decoded){

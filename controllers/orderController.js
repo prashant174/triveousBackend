@@ -71,7 +71,7 @@ const placeOrder = async (req, res) => {
       const {userId} = req.body;
       const orderId = req.params.orderId;
   
-      // Find the order by its ID for the authenticated user
+      
       const order = await OrderModel.findOne({ _id: orderId,  userId });
   
       if (!order) {

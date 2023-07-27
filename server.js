@@ -14,31 +14,14 @@ const { cartRouter } = require("./routes/cartRouter");
 const { orderRouter } = require("./routes/orderRouter");
 dotenv.config();
 
-// const options = {
-//     definition: {
-//       openapi: '3.0.0',
-//       info: {
-//         title: 'Triveous',
-//         version: '1.0.0',
-//       },
-//       servers:[
-//         {
-//           url:"http://localhost:9000"
-//         }
-//     ], 
-//     },
-    
-//     apis: ['./routes/*js'], // files containing annotations as above
-//   };
-    
-//   const spc = swaggerJsdoc(options);
+
 app.use(bodyParser.json())
-//   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(spc));
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 app.use(express.json())
 app.get("/",(req,res)=>{
-    res.send("hello India")
+    res.send("Trivous Backend")
 })
 
 app.use("/",userRouter)

@@ -1,11 +1,11 @@
-// import { Role } from '../models/UserModel';
+
 
  const authorize = (requiredRoles) => {
     return async (req, res, next) => {
       try {
         const role = req.body.role
         const hasRequiredRole = requiredRoles.includes(role)
-        // console.log(hasRequiredRole, "requiredrole")
+        
         if (requiredRoles.includes(role)) {
           next();
         }else{

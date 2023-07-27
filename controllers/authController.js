@@ -33,7 +33,7 @@ const signUp=async(req,res)=>{
     }
 }
 
-//User logIn
+
 
 const logIn=async(req,res)=>{
     const {email,password}=req.body
